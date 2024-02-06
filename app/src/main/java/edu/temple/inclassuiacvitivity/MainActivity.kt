@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
             Log.d("array", "i: ${numberArray[i]}")
 
         /* TODO Step 2: Create adapter to display items from array in Spinner */
-        //spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
-
+        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
+        spinner.adapter = adapter
 
         // TODO Step 3: Change TextView's text size to the number selected in the Spinner */
         //spinner.onItemSelectedListener = object: ...
