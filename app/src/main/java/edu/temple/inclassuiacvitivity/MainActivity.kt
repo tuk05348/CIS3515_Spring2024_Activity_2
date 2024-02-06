@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
         /* TODO Step 1: Populate this array */
-        //val numberArray = Array Of Numbers
+        val numberRange = 2..100 step 2
+        val numberArray : IntArray = numberRange.toList().toIntArray()
 
         /* TODO Step 2: Create adapter to display items from array in Spinner */
         //spinner.adapter = ArrayAdapter...
